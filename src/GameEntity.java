@@ -2,9 +2,8 @@ public class GameEntity {
     private int health;
     private int damage;
 
-//    GameEntity() {
-//        super();
-//    }
+    public GameEntity(){
+    }
 
     public int getHealth() {
         return health;

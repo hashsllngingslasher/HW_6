@@ -1,7 +1,9 @@
-import java.util.Arrays;
-
 public class Skeleton extends Boss{
     private int arrowsAmount;
+    public Skeleton(int health, int damage, Weapon bossWeapon, int arrowsAmount){
+        super(health, damage, bossWeapon);
+        setArrowsAmount(arrowsAmount);
+    }
 
     public int getArrowsAmount(){
         return arrowsAmount;
@@ -12,6 +14,6 @@ public class Skeleton extends Boss{
     }
 
     public String printInfo(){
-        return super.printInfo()+ "Arrows : " + arrowsAmount;
+        return super.printInfo() + "\nArrows : " + getArrowsAmount();
     }
 }

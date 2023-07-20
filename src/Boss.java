@@ -5,6 +5,13 @@ public class Boss extends GameEntity {
 
     private Weapon bossWeapon;
 
+    public Boss(int health, int damage, Weapon bossWeapon){
+        super();
+        this.setHealth(health);
+        this.setDamage(damage);
+        this.bossWeapon = bossWeapon;
+    }
+
     public Weapon getBossWeapon() {
         return bossWeapon;
     }
@@ -14,12 +21,10 @@ public class Boss extends GameEntity {
     }
 
     public String printInfo() {
-        String info = "Boss health: " + getHealth() +
+        return "Boss health: " + getHealth() +
                 "\nBoss damage: " + getDamage() +
                 "\nBoss weapon type: " + bossWeapon.getWeaponType() +
                 "\nBoss weapon name: " + bossWeapon.getWeaponName();
-        System.out.println(info);
-        return info;
     }
 }
 
